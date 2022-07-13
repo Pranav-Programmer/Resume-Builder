@@ -26,3 +26,14 @@ def logoutUser(request):
     logout(request)
     return redirect("/login")
 
+def template(request):
+    return render(request,"exampletemp.html")
+
+def sec1(request):
+    return render(request,"sec1.html")
+
+def sec2(request):
+    return render(request,"sec3.html")
+
+def sec3(request):
+    return render(request,"sec3.html")

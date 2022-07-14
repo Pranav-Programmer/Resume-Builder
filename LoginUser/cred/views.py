@@ -37,3 +37,7 @@ def sec2(request):
 
 def sec3(request):
     return render(request,"sec3.html")
+
+def current(request):
+    return render(request,"current.html")
+

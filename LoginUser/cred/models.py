@@ -10,7 +10,7 @@ class intro(models.Model):
     github=models.CharField(max_length=122)
     university=models.CharField(max_length=122)
     degree=models.CharField(max_length=122)
-    #year=models.DecimalField(max_digits=4,decimal_places=0)
+    year=models.DecimalField(max_digits=4,decimal_places=0,default=2024)
     branch=models.CharField(max_length=122)
     cg=models.DecimalField(max_digits=3,decimal_places=2)
     school=models.CharField(max_length=122)

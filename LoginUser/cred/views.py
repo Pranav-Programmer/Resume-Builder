@@ -45,12 +45,13 @@ def sec1(request):
             github=request.POST.get('Github')
             university=request.POST.get('University')
             degree=request.POST.get('degree')
+            year=request.POST.get('year')
             branch=request.POST.get('Branch')
             cg=request.POST.get('CGPA')
             school=request.POST.get('HSC')
             percentage=request.POST.get('Percentage')
         
-            alpha=intro(name=name,email=email,rollno=rollno,number=number,linkd=linkd,github=github,university=university,degree=degree,branch=branch,cg=cg,school=school,percentage=percentage)
+            alpha=intro(name=name,email=email,rollno=rollno,number=number,linkd=linkd,github=github,year=year,university=university,degree=degree,branch=branch,cg=cg,school=school,percentage=percentage)
             alpha.save()
             
             return redirect('/sec2')

@@ -11,6 +11,3 @@ urlpatterns = [
     path('sec2',views.sec2,name='sec2'),
     path('sec3',views.sec3,name='sec3')
 ]
-
-=======
->>>>>>> 8f566a1c7de6a0c70323644bbee76e0f7fef5c72

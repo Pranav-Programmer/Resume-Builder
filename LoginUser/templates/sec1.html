@@ -1,5 +1,110 @@
 {% extends 'base.html' %}
 {% block title%}Section 1{%endblock title%}
 {% block body%}
-
+<style>
+        
+    body{
+       background-size: cover;
+       padding: 0;
+       margin: 0;
+       font-family: Arial, Helvetica, sans-serif;
+       color: rgb(48, 46, 46);
+   }
+   .echocss{
+     margin-left: 40em;
+     margin-top: -20px;
+     position: absolute;
+     color: red;
+     font-weight: bold;
+   }
+   .card-body{
+       background-color: light gray;
+       margin-top: 25px; 
+       width: 1001px; 
+       margin-left: 259px; 
+       height: 96%;
+   }
+   /* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 1156px) {
+.echocss{
+     margin-left: 20em;
+     margin-top: -20px;
+     position: absolute;
+     color: red;
+     font-weight: bold;
+   }
+body{
+       width: 100%;
+       background-size: cover;
+       padding: 0;
+       margin: 0;
+       font-family: Arial, Helvetica, sans-serif;
+       color: rgb(48, 46, 46);
+   }
+.card-body{
+       background-color: #E5E8E8; 
+       width: 70%; 
+       margin-left:15%;
+       margin-top: 10%;
+       height: 700px;
+   }
+}
+</style>
+<div>
+<div class="card card-body">
+<form action="/sec1" method="POST">
+<div class="mb-3">
+<label for="Name" class="form-label">Name</label>
+<input type="text" class="form-control" id="" name="name" placeholder="Enter your full name">
+</div>
+<div class="mb-3">
+<label for="exampleInputNumber" class="form-label">Mobile Number</label>
+<input type="number" class="form-control" id="exampleInputNumber" name="number" placeholder="Enter your number">
+</div>
+<div class="mb-3">
+<label for="exampleInputEmail1" class="form-label">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+</div>
+<div class="mb-3">
+<label for="Linkdin" class="form-label">Linkdin Link</label>
+<input type="text" class="form-control" id="" name="linkdin" placeholder="Enter Linkdin Link">
+</div>
+<div class="mb-3">
+<label for="Github" class="form-label">Github Link</label>
+<input type="text" class="form-control" id="" name="Github" placeholder="Enter Github Link">
+</div>
+<div class="mb-3">
+<label for="University" class="form-label">University Name</label>
+<input type="text" class="form-control" id="" name="University" placeholder="Enter University Name">
+</div>
+<div class="mb-3">
+<label for="recipient-name" class="col-form-label">Degree:</label>
+  <select class="form-control" name="year" required>
+                <option></option>
+                <option>B.Tech.</option>
+                <option>M.Tech.</option>
+                <option>Phd</option>
+            </select>
+</div>
+<div class="mb-3">
+    <label for="Branch" class="form-label">Branch</label>
+    <input type="text" class="form-control" id="" name="Branch" placeholder="Enter your Branch">
+  </div>
+<div class="mb-3">
+    <label for="exampleInputNumber" class="form-label">CGPA/GPA</label>
+    <input type="number" class="form-control" id="exampleInputNumber" name="CGPA" placeholder="Enter your CGPA/GPA">
+  </div>
+  <div class="mb-3">
+    <label for="HSC" class="form-label">HSC School Name</label>
+    <input type="text" class="form-control" id="" name="HSC" placeholder="Enter your HSC School Name">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputNumber" class="form-label">HSC Percentage</label>
+    <input type="Percentage" class="form-control" id="exampleInputNumber" name="Percentage" placeholder="Enter your HSC Percentage">
+  </div>
+<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+</form>
+</div>
+</div>
 {%endblock body%}

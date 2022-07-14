@@ -1,6 +1,12 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
+from datetime import datetime
+from cred.models import intro
+from django.contrib import messages
 from django.contrib.auth import logout,authenticate,login
+import jinja2
+import os
+from jinja2 import Template
 # Create your views here.
 def index(request):
     if request.user.is_anonymous:
@@ -30,14 +36,48 @@ def template(request):
     return render(request,"exampletemp.html")
 
 def sec1(request):
+    if request.method=="POST":
+            rollno=request.user
+            name=request.POST.get('name')
+            email=request.POST.get('email')
+            number=request.POST.get('number')
+            linkd=request.POST.get('linkdin')
+            github=request.POST.get('Github')
+            university=request.POST.get('University')
+            degree=request.POST.get('degree')
+            branch=request.POST.get('Branch')
+            cg=request.POST.get('CGPA')
+            school=request.POST.get('HSC')
+            percentage=request.POST.get('Percentage')
+        
+            alpha=intro(name=name,email=email,rollno=rollno,number=number,linkd=linkd,github=github,university=university,degree=degree,branch=branch,cg=cg,school=school,percentage=percentage)
+            alpha.save()
+            
+            return redirect('/sec2')
+    
     return render(request,"sec1.html")
 
 def sec2(request):
-    return render(request,"sec3.html")
+    return render(request,"sec2.html")
 
 def sec3(request):
     return render(request,"sec3.html")
 
 def current(request):
+    latex_jinja_env = jinja2.Environment(
+	block_start_string = '\BLOCK{',
+	block_end_string = '}',
+	variable_start_string = '\VAR{',
+	variable_end_string = '}',
+	comment_start_string = '\#{',
+	comment_end_string = '}',
+	line_statement_prefix = '%%',
+	line_comment_prefix = '%#',
+	trim_blocks = True,
+	autoescape = False,
+	loader = jinja2.FileSystemLoader(os.path.abspath('.'))
+    )
+    
+    
     return render(request,"current.html")
 

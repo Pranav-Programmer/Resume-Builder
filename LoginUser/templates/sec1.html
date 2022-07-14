@@ -18,7 +18,7 @@
      font-weight: bold;
    }
    .card-body{
-       background-color: light gray;
+       background-color: #E5E8E8;;
        margin-top: 25px; 
        width: 1001px; 
        margin-left: 259px; 
@@ -46,7 +46,7 @@ body{
        width: 70%; 
        margin-left:15%;
        margin-top: 10%;
-       height: 700px;
+       height: 100%;
    }
 }
 </style>
@@ -80,13 +80,17 @@ body{
 </div>
 <div class="mb-3">
 <label for="recipient-name" class="col-form-label">Degree:</label>
-  <select class="form-control" name="year" required>
+  <select class="form-control" name="degree" required>
                 <option></option>
                 <option>B.Tech.</option>
                 <option>M.Tech.</option>
                 <option>Phd</option>
             </select>
 </div>
+ <div class="mb-3">
+    <label for="Graduation" class="form-label">Year of Graduation</label>
+    <input type="number" class="form-control" id="" name="year" placeholder="Enter your Graduation Year">
+  </div>
 <div class="mb-3">
     <label for="Branch" class="form-label">Branch</label>
     <input type="text" class="form-control" id="" name="Branch" placeholder="Enter your Branch">

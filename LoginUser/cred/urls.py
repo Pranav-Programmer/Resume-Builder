@@ -10,9 +10,5 @@ urlpatterns = [
     path('sec1',views.sec1,name='sec1'),
     path('sec2',views.sec2,name='sec2'),
     path('sec3',views.sec3,name='sec3')
-<<<<<<< Updated upstream
 ]
-  
-=======
-]
->>>>>>> Stashed changes
+

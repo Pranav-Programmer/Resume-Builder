@@ -7,6 +7,8 @@ from django.contrib.auth import logout,authenticate,login
 import jinja2
 import os
 from jinja2 import Template
+from django_tex.shortcuts import render_to_pdf
+
 # Create your views here.
 def index(request):
     if request.user.is_anonymous:
@@ -65,20 +67,23 @@ def sec3(request):
     return render(request,"sec3.html")
 
 def current(request):
-    latex_jinja_env = jinja2.Environment(
-	block_start_string = '\BLOCK{',
-	block_end_string = '}',
-	variable_start_string = '\VAR{',
-	variable_end_string = '}',
-	comment_start_string = '\#{',
-	comment_end_string = '}',
-	line_statement_prefix = '%%',
-	line_comment_prefix = '%#',
-	trim_blocks = True,
-	autoescape = False,
-	loader = jinja2.FileSystemLoader(os.path.abspath('.'))
-    )
+    # latex_jinja_env = jinja2.Environment(
+	# block_start_string = '\BLOCK{',
+	# block_end_string = '}',
+	# variable_start_string = '\VAR{',
+	# variable_end_string = '}',
+	# comment_start_string = '\#{',
+	# comment_end_string = '}',
+	# line_statement_prefix = '%%',
+	# line_comment_prefix = '%#',
+	# trim_blocks = True,
+	# autoescape = False,
+	# loader = jinja2.FileSystemLoader(os.path.abspath('.'))
+    # )
+    template_name = "tests/alpha.tex"
+    context = {'foo': 'Bar'}
+    return render_to_pdf(request, template_name, context, filename='test.pdf')
     
     
-    return render(request,"current.html")
+    #return render(request,"current.html")
 

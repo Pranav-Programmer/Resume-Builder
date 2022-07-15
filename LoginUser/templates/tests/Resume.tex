@@ -1,0 +1,307 @@
+%-------------------------
+% Resume in Latex
+% Author : Deepanshu Gupta, Aryan Goyal
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage[most]{tcolorbox}
+
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{1},\hspace{0.3mm}#2 & \textit{\small{3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{1} & \textit{\footnotesize{4}} \\
+        \textit{\footnotesize{3}} &  \footnotesize{2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{1} & \textit{\footnotesize{3}} \\
+        \footnotesize{\textit{2}} & \footnotesize{4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{1}{2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Devansh Agrawal} % Your Name
+\newcommand{\course}{B.Tech - Computer Science Engineering} % Your Course
+\newcommand{\roll}{B20094} % Your Roll No.
+\newcommand{\phone}{6261824374} % Your Phone Number
+\newcommand{\emaila}{B20094@students.iitmandi.ac.in} %Email 1
+\newcommand{\emailb}{devanshagrawal0109@gmail.com} %Email 2
+\newcommand{\github}{Devansh0901} %Github
+%--\newcommand{\website}{https://example.com} %Website
+\newcommand{\linkedin}{Devansh0901} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{
+
+
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {} & \href{mailto:\emaila}{\emaila} \\
+  Roll No.:\roll &  \href{mailto:\emailb}{\emailb}\\
+  {\course} & \href{https://github.com/Devansh0901}{https://github.com/Devansh0901} \\
+  {Indian Institute Of Technology, Mandi} & \href{https://www.linkedin.com/in/devansh-agrawal-5baab3238/}{linkedin.com/in/devansh-agrawal-5baab3238/}
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Mandi}{Mandi, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\begin{tcolorbox}
+\textsc{Education}
+\end{tcolorbox}
+\vspace{-2mm}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. Major & Indian Institute of Technology, Mandi & 8.30 (Current) & 2020-Present\\
+ % \hline
+ % B.Tech. Minor & Indian Institute of Technology, Mandi & 0.0 (Current) & 2019-Present\\ %Optional
+  \hline
+  Senior Secondary & CBSE Board & 90.6\% & 2020 \\
+  \hline
+  Secondary & CBSE Board & 96.2\% & 2018 \\
+  \hline
+\end{tabularx}}
+\vspace{4mm}
+
+%-----------EXPERIENCE-----------------
+
+%-----------PROJECTS-----------------
+
+\begin{tcolorbox}
+\textsc{Projects}
+\end{tcolorbox}
+\vspace{-4mm}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Cab Booking System - Cabenato} %Project Name
+      {Tech: HTML, CSS, MySQL, PHP, Bootstrap, Python} %Prof Name, Location Name
+      {} %Event Dates
+      {\href{https://github.com/Devansh0901/Cab-Booking-System-Cabenato}{Github Link}} %Website
+      \resumeItemListStart
+        \item {Application allows user to book a cab according to there needs.}
+        \item {User verification and registration is done using using PHP. }
+        \item {Random Dataset generation is done using numpy and stored in mysql using sql.connect.}
+        \item{For the styling the web page bootstrap is used and mySQL is used for the database.}
+    \resumeItemListEnd
+
+    \resumeProject
+      {Resume builder - Entrust} %Project Name
+      {Tech: Django, Latex, Python, Jinja, SQLite, HTML,Bootstrap} %Prof Name, Location Name
+      {} %Event Dates
+      {\href{https://github.com/Devansh0901/Resume-Builder}{Github Link}} %Website
+      \resumeItemListStart
+        \item {Using Jinja templating engine to create Latex template for resume building which saves user's time.}
+        \item {User enters the required data in the HTML form and a Latex template is generated from it.}
+        \item {Site has a user authentication system build on django and also uses django message framework at multiple instances to make site interactive.}
+    \resumeItemListEnd
+
+        \resumeProject
+      {CreamStone Icream- Food Ordering Site} %Project Name
+      {Tech: Django, bootstrap, SQLite, Python, HTML} %Prof Name, Location Name
+      {} %Event Dates
+      {\href{https://github.com/Devansh0901/Hectic-Ice-Cream}{Github Link}} %Website
+      \resumeItemListStart
+        \item {It is a Online Food ordering site which is implemented using the Django web framework.}
+        \item {This website will also handle how to authenticate the user or how to add a user using built-in authentication system of Django.}
+        \item {This site uses django.contrib.messages for showing flash messages at multiply instances.}
+        \item{For the database model SQlite is used and bootstrap is used to make site more appealing.}
+    \resumeItemListEnd
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-3mm}
+
+%----------------------TECH skills---------------------
+\begin{tcolorbox}
+\textsc{Technical Skills}
+\end{tcolorbox}
+\vspace{-4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming} % Category
+    {C++, Python, PHP, MySQL}
+ \resumeSubItem{Frameworks} % Category
+    {Django, Scikit-Learn, Pandas, TensorFlow} % Skills
+\resumeSubItem{Other Tools} % Category
+    {SQLite, HTML, CSS, GIT, Bootstrap, Visual studio code} % Skills
+%\hfill \textit{\footnotesize{* Elementary proficiency}} \hspace{3mm}
+ \resumeHeadingSkillEnd
+% \vspace{4mm}
+
+%---------------------------------KEY COURSES---------------
+\begin{tcolorbox}
+\textsc{Key courses taken}
+\end{tcolorbox}
+\vspace{-4mm}
+\resumeHeadingSkillStart
+ \resumeSubItem{Mathematics} % Category
+    {: Linear Algebra, Mathematical Foundation of Computer Science, Data Science II (Probability \&
+Statistics), Signals \& Systems}
+\resumeSubItem{Computer Science}
+ {: Data Structures \& Algorithms, Applied Database Practicum, Information and Database
+System (DBMS), Computer Organization, Data Science 1 (Basic Python ), Data Science 3 (Machine
+Learning), Formal Language \& Automata Theory}
+ \resumeHeadingSkillEnd
+\vspace{4mm}
+
+%-----------------------------EXTRA CURRICULURS--------------
+
+
+
+
+%---------------------------ACHIEVEMENTS--------------------
+\begin{tcolorbox}
+\textsc{Achievements}
+\end{tcolorbox}
+\vspace{-4mm}
+\resumeSubHeadingListStart
+\resumePOR{Codeforces Rating} % Award
+    {1398 (max)} % Event
+    {} %Event Year
+\resumePOR{Global Rank: 734} % Award
+    {Codeforces Round 786 (Division 3)} % Event
+    {} %Event Year
+\resumePOR{All India Rank: 2939 } % Award
+    { JEE Advance 2020 } % Event
+    {} %Event Year
+\resumePOR{HacktoberFest Qualified} % Award
+   { 2021}
+   { }
+\resumePOR{Solved 400+ problems} % Award
+   { on various platforms like InterviewBit and Codeforces.}
+   { }
+\resumeSubHeadingListEnd
+% \vspace{4mm}
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+%-----------------------------MISCELLANEOUS -----------------
+\end{document}
